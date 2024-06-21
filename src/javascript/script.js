@@ -56,45 +56,38 @@ function updateColor() {
 }
 
 
-plusButtonCertas.addEventListener('mousedown', () => {
-    intervalIdCertas = setInterval(() => {
+plusButtonCertas.addEventListener('click', () => {
         countCertas += 1;
         updateValorCertas();
         contarTotal();
         calcularPorcentagem();
-    }, 60);
+
 });
 
-minusButtonCertas.addEventListener('mousedown', () => {
+minusButtonCertas.addEventListener('click', () => {
     if (countCertas > 0) {
-        intervalIdCertas = setInterval(() => {
             countCertas -= 1;
             updateValorCertas();
             contarTotal();
             calcularPorcentagem();
-        }, 60);
     }
 
 });
 
 
-plusButtonErradas.addEventListener('mousedown', () => {
-    intervalIdErradas = setInterval(() => {
+plusButtonErradas.addEventListener('click', () => {
         countErradas += 1;
         updateValorErradas();
         contarTotal();
         calcularPorcentagem();
-    }, 60);
 });
 
-minusButtonErradas.addEventListener('mousedown', () => {
+minusButtonErradas.addEventListener('click', () => {
     if (countErradas > 0) {
-        intervalIdErradas = setInterval(() => {
             countErradas -= 1;
             updateValorErradas();
             contarTotal();
             calcularPorcentagem();
-        }, 60);
     }
 });
 
@@ -107,9 +100,7 @@ resetButton.addEventListener('click', () => {
     updateValorErradas();
     updateValorTotal();
     updateValorPorcentagem();
-    porcentagem.classList.add("porcentagem");
-
-
+    porcentagem.classList.remove("porcentagemBoa", "porcentagemMedia", "porcentagemRuim");
 });
 
 function contarTotal() {
@@ -118,11 +109,11 @@ function contarTotal() {
 };
 
 function calcularPorcentagem() {
-    countPorcentagem = ((countCertas * 100) / countTotal).toFixed();
+    if(countTotal==0){
+        countPorcentagem = 0;
+    }
+    else {countPorcentagem = ((countCertas * 100) / countTotal).toFixed();
+    }
     updateValorPorcentagem();
     updateColor();
 }
-
-
-document.addEventListener('mouseup', () => clearInterval(intervalIdCertas));
-document.addEventListener('mouseup', () => clearInterval(intervalIdErradas));
