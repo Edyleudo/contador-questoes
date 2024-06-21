@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <title>Contador</title>
+</head>
+
+<body>
+    <div>
+        
+        <div id="counter">
+            <div>
+                <span class="text">
+                    Total
+                </span>
+                <span id="total" class="text">
+                    0
+                </span>
+                <span class="text">
+                    Acertividade
+                </span>
+                <span id="porcentagem" class="porcentagem">
+                    0
+                </span>
+                <span class="porcentagem">
+                    %
+                </span>
+            </div>
+        </div>
+
+        <br>
+
+        <div id="counterCertas">
+            <span id="tipo">CERTAS</span>
+
+            <div>
+                <button id="plus" class="count-button">
+                    +
+                </button>
+
+                <span id="valorCertas" class="valor">
+                    0
+                </span>
+                <button id="minus" class="count-button">
+                    -
+                </button>
+            </div>
+        </div>
+
+        <br>
+
+        <div>
+            <div id="counterErradas">
+                <span id="tipo">ERRADAS</span>
+                <div>
+                    <button id="plusErradas" class="count-button">
+                        +
+                    </button>
+                    <span id="valorErradas" class="valor">
+                        0
+                    </span>
+                    <button id="minusErradas" class="count-button">
+                        -
+                    </button>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <button id="reset">
+            Resetar
+        </button>
+
+    </div>
+
+    <script src="src/javascript/script.js"></script>
+
+</body>
+
+</html>
