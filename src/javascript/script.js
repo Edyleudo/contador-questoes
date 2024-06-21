@@ -62,7 +62,7 @@ plusButtonCertas.addEventListener('mousedown', () => {
         updateValorCertas();
         contarTotal();
         calcularPorcentagem();
-    }, 100);
+    }, 60);
 });
 
 minusButtonCertas.addEventListener('mousedown', () => {
@@ -72,7 +72,7 @@ minusButtonCertas.addEventListener('mousedown', () => {
             updateValorCertas();
             contarTotal();
             calcularPorcentagem();
-        }, 100);
+        }, 60);
     }
 
 });
@@ -84,7 +84,7 @@ plusButtonErradas.addEventListener('mousedown', () => {
         updateValorErradas();
         contarTotal();
         calcularPorcentagem();
-    }, 100);
+    }, 60);
 });
 
 minusButtonErradas.addEventListener('mousedown', () => {
@@ -94,7 +94,7 @@ minusButtonErradas.addEventListener('mousedown', () => {
             updateValorErradas();
             contarTotal();
             calcularPorcentagem();
-        }, 100);
+        }, 60);
     }
 });
 
